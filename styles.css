@@ -20,20 +20,18 @@ body {
     z-index: 1000;
 }
 
-.logo-placeholder {
+.institutional-logo {
+    height: 60px;
+    width: auto;
     background: rgba(255, 255, 255, 0.9);
-    padding: 10px 15px;
+    padding: 8px;
     border-radius: 10px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-weight: 600;
-    color: #667eea;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
 }
 
-.logo-placeholder i {
-    font-size: 20px;
+.institutional-logo:hover {
+    transform: scale(1.05);
 }
 
 /* Navegación */
