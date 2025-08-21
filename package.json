@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "npx http-server . -p 3000 -c-1",
     "start": "npx http-server . -p 3000 -c-1",
+    "build": "mkdir -p dist && cp index.html dist/ && cp styles.css dist/ && cp script.js dist/ && cp readme.md dist/",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
