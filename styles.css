@@ -1024,6 +1024,10 @@ body {
 }
 
 .microsoft-form-iframe {
+    width: 100% !important;
+    height: 600px !important;
+    max-width: 100% !important;
+    max-height: 100vh !important;
     border-radius: 15px;
     background: white;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
