@@ -412,6 +412,67 @@
                         <i class="fas fa-star"></i>
                         <p><strong>¡El futuro de la tecnología está en tus manos!</strong></p>
                     </div>
+                    
+                    <!-- Formulario para compartir URLs -->
+                    <div class="url-submission-section">
+                        <h3>¡Comparte tu creación!</h3>
+                        <p>Envíanos la URL de tu app creada en Bolt para que podamos verla y celebrar tu logro</p>
+                        
+                        <!-- Opción 1: Formspree (recomendado) -->
+                        <form class="url-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                            <div class="form-group">
+                                <label for="participant-name">
+                                    <i class="fas fa-user"></i>
+                                    Tu nombre o nombre del equipo
+                                </label>
+                                <input type="text" id="participant-name" name="name" required placeholder="Ej: María García o Equipo Innovadoras">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="app-name">
+                                    <i class="fas fa-mobile-alt"></i>
+                                    Nombre de tu app
+                                </label>
+                                <input type="text" id="app-name" name="app_name" required placeholder="Ej: EcoTracker, StudyBuddy, MoodHelper">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="app-url">
+                                    <i class="fas fa-link"></i>
+                                    URL de tu app en Bolt
+                                </label>
+                                <input type="url" id="app-url" name="app_url" required placeholder="https://bolt.new/...">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="app-description">
+                                    <i class="fas fa-comment"></i>
+                                    Describe brevemente tu app (opcional)
+                                </label>
+                                <textarea id="app-description" name="description" rows="3" placeholder="¿Qué problema resuelve tu app? ¿Qué te gustó más del proceso?"></textarea>
+                            </div>
+                            
+                            <button type="submit" class="submit-btn">
+                                <i class="fas fa-paper-plane"></i>
+                                Compartir mi creación
+                            </button>
+                        </form>
+                        
+                        <!-- Alternativa: Enlace directo -->
+                        <div class="alternative-sharing">
+                            <p><strong>¿Prefieres otra forma?</strong></p>
+                            <div class="sharing-options">
+                                <a href="mailto:contacto@stem.edu?subject=Mi App GirlsAppLab&body=Hola! Soy [Tu nombre] y creé una app llamada [Nombre de la app]. Aquí está el enlace: [URL de Bolt]" class="sharing-option">
+                                    <i class="fas fa-envelope"></i>
+                                    Enviar por email
+                                </a>
+                                <a href="https://wa.me/1234567890?text=¡Hola! Participé en GirlsAppLab y creé una app. Aquí está el enlace:" class="sharing-option" target="_blank">
+                                    <i class="fab fa-whatsapp"></i>
+                                    Compartir por WhatsApp
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
