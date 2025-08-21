@@ -418,45 +418,42 @@
                         <h3>¡Comparte tu creación!</h3>
                         <p>Envíanos la URL de tu app creada en Bolt para que podamos verla y celebrar tu logro</p>
                         
-                        <!-- Opción 1: Formspree (recomendado) -->
-                        <form class="url-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-                            <div class="form-group">
-                                <label for="participant-name">
-                                    <i class="fas fa-user"></i>
-                                    Tu nombre o nombre del equipo
-                                </label>
-                                <input type="text" id="participant-name" name="name" required placeholder="Ej: María García o Equipo Innovadoras">
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="app-name">
+                        <!-- Microsoft Forms Embed -->
+                        <div class="microsoft-forms-container">
+                            <div class="forms-instructions">
+                                <div class="instruction-item">
+                                    <i class="fas fa-info-circle"></i>
+                                    <p>Completa el formulario para compartir tu app con nosotros</p>
+                                </div>
+                                <div class="instruction-item">
                                     <i class="fas fa-mobile-alt"></i>
-                                    Nombre de tu app
-                                </label>
-                                <input type="text" id="app-name" name="app_name" required placeholder="Ej: EcoTracker, StudyBuddy, MoodHelper">
+                                    <p>Incluye el enlace de tu app creada en Bolt</p>
+                                </div>
                             </div>
                             
-                            <div class="form-group">
-                                <label for="app-url">
-                                    <i class="fas fa-link"></i>
-                                    URL de tu app en Bolt
-                                </label>
-                                <input type="url" id="app-url" name="app_url" required placeholder="https://bolt.new/...">
-                            </div>
+                            <!-- Reemplaza esta URL con la de tu Microsoft Form -->
+                            <iframe 
+                                src="https://forms.office.com/Pages/ResponsePage.aspx?id=YOUR_FORM_ID" 
+                                width="100%" 
+                                height="600" 
+                                frameborder="0" 
+                                marginheight="0" 
+                                marginwidth="0"
+                                class="microsoft-form-iframe">
+                                Cargando formulario...
+                            </iframe>
                             
-                            <div class="form-group">
-                                <label for="app-description">
-                                    <i class="fas fa-comment"></i>
-                                    Describe brevemente tu app (opcional)
-                                </label>
-                                <textarea id="app-description" name="description" rows="3" placeholder="¿Qué problema resuelve tu app? ¿Qué te gustó más del proceso?"></textarea>
+                            <!-- Botón para abrir en nueva ventana si hay problemas -->
+                            <div class="form-fallback">
+                                <p>¿No puedes ver el formulario?</p>
+                                <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=YOUR_FORM_ID" 
+                                   target="_blank" 
+                                   class="fallback-btn">
+                                    <i class="fas fa-external-link-alt"></i>
+                                    Abrir formulario en nueva ventana
+                                </a>
                             </div>
-                            
-                            <button type="submit" class="submit-btn">
-                                <i class="fas fa-paper-plane"></i>
-                                Compartir mi creación
-                            </button>
-                        </form>
+                        </div>
                         
                         <!-- Alternativa: Enlace directo -->
                         <div class="alternative-sharing">

@@ -982,7 +982,96 @@ body {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 }
 
-/* Formulario de envío de URLs */
+/* Microsoft Forms Container */
+.microsoft-forms-container {
+    background: rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    border-radius: 20px;
+    margin-top: 30px;
+    backdrop-filter: blur(10px);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.forms-instructions {
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.instruction-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 15px 20px;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+}
+
+.instruction-item i {
+    font-size: 1.2rem;
+    color: #ffd700;
+    flex-shrink: 0;
+}
+
+.instruction-item p {
+    font-size: 1rem;
+    margin: 0;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+.microsoft-form-iframe {
+    border-radius: 15px;
+    background: white;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+}
+
+.form-fallback {
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.15);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+}
+
+.form-fallback p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    opacity: 0.9;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+.fallback-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    color: white;
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.fallback-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(45deg, #5a67d8, #6b46c1);
+}
+
+.fallback-btn i {
+    font-size: 1.1rem;
+}
+
+/* Formulario de envío de URLs (mantenido como fallback) */
 .url-submission-section {
     background: rgba(0, 0, 0, 0.2);
     padding: 40px;
@@ -1350,6 +1439,31 @@ body {
     
     .sharing-option {
         padding: 10px 15px;
+        font-size: 0.9rem;
+    }
+    
+    .microsoft-forms-container {
+        padding: 20px;
+        max-width: 100%;
+    }
+    
+    .microsoft-form-iframe {
+        height: 500px;
+    }
+    
+    .forms-instructions {
+        gap: 10px;
+    }
+    
+    .instruction-item {
+        padding: 12px 15px;
+        flex-direction: column;
+        text-align: center;
+        gap: 8px;
+    }
+    
+    .fallback-btn {
+        padding: 10px 20px;
         font-size: 0.9rem;
     }
     
