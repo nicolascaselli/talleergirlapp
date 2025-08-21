@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GirlsAppLab: De la Idea al MVP con IA</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Logo institucional -->
+    <div class="logo-container">
+        <div class="logo-placeholder">
+            <i class="fas fa-graduation-cap"></i>
+            <span>LOGO</span>
+        </div>
+    </div>
+
+    <!-- Navegación -->
+    <nav class="slide-nav">
+        <button class="nav-btn prev-btn" onclick="previousSlide()">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        <div class="slide-counter">
+            <span id="current-slide">1</span> / <span id="total-slides">9</span>
+        </div>
+        <button class="nav-btn next-btn" onclick="nextSlide()">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+    </nav>
+
+    <!-- Indicadores de slides -->
+    <div class="slide-indicators">
+        <div class="indicator active" onclick="goToSlide(0)"></div>
+        <div class="indicator" onclick="goToSlide(1)"></div>
+        <div class="indicator" onclick="goToSlide(2)"></div>
+        <div class="indicator" onclick="goToSlide(3)"></div>
+        <div class="indicator" onclick="goToSlide(4)"></div>
+        <div class="indicator" onclick="goToSlide(5)"></div>
+        <div class="indicator" onclick="goToSlide(6)"></div>
+        <div class="indicator" onclick="goToSlide(7)"></div>
+        <div class="indicator" onclick="goToSlide(8)"></div>
+    </div>
+
+    <!-- Contenedor de slides -->
+    <div class="slides-container" id="slidesContainer">
+        
+        <!-- Slide 1: Título del taller -->
+        <div class="slide slide-1 active">
+            <div class="slide-content">
+                <div class="title-section">
+                    <h1 class="main-title">GirlsAppLab</h1>
+                    <h2 class="subtitle">De la Idea al MVP con IA</h2>
+                    <p class="description">Un taller para niñas que quieren transformar ideas en aplicaciones con la ayuda de la inteligencia artificial</p>
+                </div>
+                <div class="hero-illustration">
+                    <div class="girl-coding">
+                        <i class="fas fa-laptop-code"></i>
+                        <i class="fas fa-mobile-alt"></i>
+                        <i class="fas fa-lightbulb"></i>
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 2: Bienvenida e introducción -->
+        <div class="slide slide-2">
+            <div class="slide-content">
+                <div class="content-header">
+                    <h2>Bienvenida e Introducción</h2>
+                    <span class="time-badge">0-5 min</span>
+                </div>
+                <div class="content-grid">
+                    <div class="content-left">
+                        <div class="point">
+                            <i class="fas fa-heart"></i>
+                            <h3>Propósito del taller</h3>
+                            <p>Empoderar a las niñas para crear soluciones tecnológicas usando IA</p>
+                        </div>
+                        <div class="point">
+                            <i class="fas fa-star"></i>
+                            <h3>Apps creadas por niñas</h3>
+                            <p>Ejemplos inspiradores de aplicaciones desarrolladas por jóvenes</p>
+                        </div>
+                        <div class="point">
+                            <i class="fas fa-puzzle-piece"></i>
+                            <h3>¿Qué es un MVP?</h3>
+                            <p>Producto Mínimo Viable: la versión más simple de tu idea</p>
+                        </div>
+                    </div>
+                    <div class="content-right">
+                        <div class="illustration-box">
+                            <i class="fas fa-users"></i>
+                            <p>¡Juntas crearemos algo increíble!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 3: ¿Qué es Bolt.IA? -->
+        <div class="slide slide-3">
+            <div class="slide-content">
+                <div class="content-header">
+                    <h2>¿Qué es Bolt.IA?</h2>
+                    <span class="time-badge">5-10 min</span>
+                </div>
+                <div class="demo-section">
+                    <div class="demo-info">
+                        <div class="feature">
+                            <i class="fas fa-magic"></i>
+                            <h3>IA que programa por ti</h3>
+                            <p>Describe tu idea y Bolt la convierte en una app real</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-eye"></i>
+                            <h3>Demo en vivo</h3>
+                            <p>Veremos cómo crear una app simple paso a paso</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-code"></i>
+                            <h3>Sin código complejo</h3>
+                            <p>Solo necesitas describir lo que quieres crear</p>
+                        </div>
+                    </div>
+                    <div class="demo-visual">
+                        <div class="browser-mockup">
+                            <div class="browser-header">
+                                <div class="browser-dots">
+                                    <span></span><span></span><span></span>
+                                </div>
+                                <div class="url-bar">bolt.new</div>
+                            </div>
+                            <div class="browser-content">
+                                <i class="fas fa-robot"></i>
+                                <p>¡Hora del demo!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 4: Lluvia de ideas -->
+        <div class="slide slide-4">
+            <div class="slide-content">
+                <div class="content-header">
+                    <h2>Lluvia de Ideas</h2>
+                    <span class="time-badge">10-20 min</span>
+                </div>
+                <div class="brainstorm-section">
+                    <h3>¿Qué problema quieren resolver?</h3>
+                    <div class="ideas-grid">
+                        <div class="idea-card">
+                            <i class="fas fa-heart"></i>
+                            <h4>Ayuda emocional</h4>
+                            <p>Apps para bienestar mental y apoyo</p>
+                        </div>
+                        <div class="idea-card">
+                            <i class="fas fa-apple-alt"></i>
+                            <h4>Hábitos saludables</h4>
+                            <p>Seguimiento de ejercicio y alimentación</p>
+                        </div>
+                        <div class="idea-card">
+                            <i class="fas fa-book"></i>
+                            <h4>Ayuda escolar</h4>
+                            <p>Herramientas de estudio y organización</p>
+                        </div>
+                        <div class="idea-card">
+                            <i class="fas fa-recycle"></i>
+                            <h4>Reciclaje</h4>
+                            <p>Soluciones para el cuidado ambiental</p>
+                        </div>
+                    </div>
+                    <div class="action-prompt">
+                        <i class="fas fa-lightbulb"></i>
+                        <p>¡Es momento de que cada grupo defina su problema!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 5: ¿Qué es un buen prompt? -->
+        <div class="slide slide-5">
+            <div class="slide-content">
+                <div class="content-header">
+                    <h2>¿Qué es un Buen Prompt?</h2>
+                    <span class="time-badge">20-25 min</span>
+                </div>
+                <div class="prompt-comparison">
+                    <div class="prompt-definition">
+                        <i class="fas fa-comment-dots"></i>
+                        <h3>Un prompt es...</h3>
+                        <p>La instrucción que le das a la IA para que entienda exactamente lo que quieres crear</p>
+                    </div>
+                    <div class="comparison-grid">
+                        <div class="bad-example">
+                            <div class="example-header bad">
+                                <i class="fas fa-times"></i>
+                                <h4>Prompt malo</h4>
+                            </div>
+                            <div class="example-content">
+                                <p>"Haz una app"</p>
+                                <ul>
+                                    <li>Muy vago</li>
+                                    <li>Sin detalles</li>
+                                    <li>Resultado impredecible</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="good-example">
+                            <div class="example-header good">
+                                <i class="fas fa-check"></i>
+                                <h4>Prompt bueno</h4>
+                            </div>
+                            <div class="example-content">
+                                <p>"Crea una app para adolescentes que ayude a rastrear hábitos de estudio diarios con recordatorios y estadísticas visuales"</p>
+                                <ul>
+                                    <li>Específico</li>
+                                    <li>Define el usuario</li>
+                                    <li>Explica la función</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 6: Cómo crear un buen prompt con IA -->
+        <div class="slide slide-6">
+            <div class="slide-content">
+                <div class="content-header">
+                    <h2>Cómo Crear un Buen Prompt con IA</h2>
+                    <span class="time-badge">25-30 min</span>
+                </div>
+                <div class="prompt-formula">
+                    <h3>Fórmula del prompt perfecto:</h3>
+                    <div class="formula-components">
+                        <div class="component">
+                            <div class="component-icon">
+                                <i class="fas fa-user-tie"></i>
+                            </div>
+                            <h4>ROL</h4>
+                            <p>¿Quién usará la app?</p>
+                        </div>
+                        <div class="plus">+</div>
+                        <div class="component">
+                            <div class="component-icon">
+                                <i class="fas fa-target"></i>
+                            </div>
+                            <h4>OBJETIVO</h4>
+                            <p>¿Qué problema resuelve?</p>
+                        </div>
+                        <div class="plus">+</div>
+                        <div class="component">
+                            <div class="component-icon">
+                                <i class="fas fa-map"></i>
+                            </div>
+                            <h4>CONTEXTO</h4>
+                            <p>¿Cuándo y dónde se usa?</p>
+                        </div>
+                        <div class="plus">+</div>
+                        <div class="component">
+                            <div class="component-icon">
+                                <i class="fas fa-exclamation-triangle"></i>
+                            </div>
+                            <h4>RESTRICCIONES</h4>
+                            <p>¿Qué limitaciones tiene?</p>
+                        </div>
+                        <div class="plus">+</div>
+                        <div class="component">
+                            <div class="component-icon">
+                                <i class="fas fa-clipboard-list"></i>
+                            </div>
+                            <h4>FORMATO</h4>
+                            <p>¿Cómo debe verse?</p>
+                        </div>
+                    </div>
+                    <div class="chatgpt-tip">
+                        <i class="fas fa-robot"></i>
+                        <p><strong>¡Usa ChatGPT para generar tu prompt personalizado!</strong></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 7: Construcción del MVP en Bolt -->
+        <div class="slide slide-7">
+            <div class="slide-content">
+                <div class="content-header">
+                    <h2>Construcción del MVP en Bolt</h2>
+                    <span class="time-badge">30-50 min</span>
+                </div>
+                <div class="construction-steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h4>Ingresar prompt en Bolt</h4>
+                            <p>Pega tu prompt perfecto en bolt.new</p>
+                            <i class="fas fa-paste"></i>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h4>Crear pantallas y navegación</h4>
+                            <p>La IA generará tu app automáticamente</p>
+                            <i class="fas fa-magic"></i>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h4>Personalizar tu app</h4>
+                            <p>Ajusta colores, textos y funciones</p>
+                            <i class="fas fa-palette"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="hands-on">
+                    <i class="fas fa-hands"></i>
+                    <h3>¡Manos a la obra!</h3>
+                    <p>Es momento de crear tu MVP</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 8: Presentaciones express -->
+        <div class="slide slide-8">
+            <div class="slide-content">
+                <div class="content-header">
+                    <h2>Presentaciones Express</h2>
+                    <span class="time-badge">50-60 min</span>
+                </div>
+                <div class="presentation-info">
+                    <div class="presentation-rules">
+                        <h3>Reglas de presentación:</h3>
+                        <div class="rule">
+                            <i class="fas fa-clock"></i>
+                            <p><strong>1-2 minutos</strong> por grupo</p>
+                        </div>
+                        <div class="rule">
+                            <i class="fas fa-lightbulb"></i>
+                            <p>Comparte <strong>lo que aprendiste</strong></p>
+                        </div>
+                        <div class="rule">
+                            <i class="fas fa-heart"></i>
+                            <p>Cuenta <strong>lo que más te gustó</strong></p>
+                        </div>
+                    </div>
+                    <div class="presentation-visual">
+                        <div class="stage">
+                            <i class="fas fa-microphone"></i>
+                            <p>¡Tu momento de brillar!</p>
+                        </div>
+                        <div class="audience">
+                            <i class="fas fa-users"></i>
+                            <p>Audiencia expectante</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 9: Cierre e inspiración final -->
+        <div class="slide slide-9">
+            <div class="slide-content">
+                <div class="closing-section">
+                    <h2>¡Felicitaciones!</h2>
+                    <div class="achievement">
+                        <i class="fas fa-trophy"></i>
+                        <h3>Has completado tu primer MVP con IA</h3>
+                    </div>
+                    <div class="inspiration">
+                        <h3>Sigue explorando:</h3>
+                        <div class="next-steps">
+                            <div class="step-item">
+                                <i class="fas fa-rocket"></i>
+                                <p>Mejora tu app</p>
+                            </div>
+                            <div class="step-item">
+                                <i class="fas fa-brain"></i>
+                                <p>Aprende más sobre IA</p>
+                            </div>
+                            <div class="step-item">
+                                <i class="fas fa-code"></i>
+                                <p>Explora programación</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="resources">
+                        <h4>Recursos y contacto:</h4>
+                        <div class="social-links">
+                            <a href="#" class="social-link">
+                                <i class="fab fa-instagram"></i>
+                                <span>@carrera_stem</span>
+                            </a>
+                            <a href="#" class="social-link">
+                                <i class="fas fa-globe"></i>
+                                <span>recursos.stem.edu</span>
+                            </a>
+                            <a href="#" class="social-link">
+                                <i class="fas fa-envelope"></i>
+                                <span>contacto@stem.edu</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="final-message">
+                        <i class="fas fa-star"></i>
+                        <p><strong>¡El futuro de la tecnología está en tus manos!</strong></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

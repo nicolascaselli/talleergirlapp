@@ -1,0 +1,987 @@
+/* Reset y fuentes */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    height: 100vh;
+}
+
+/* Logo institucional */
+.logo-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.logo-placeholder {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 10px 15px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 600;
+    color: #667eea;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.logo-placeholder i {
+    font-size: 20px;
+}
+
+/* Navegación */
+.slide-nav {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 15px 25px;
+    border-radius: 50px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.nav-btn {
+    background: #667eea;
+    border: none;
+    color: white;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.nav-btn:hover {
+    background: #5a67d8;
+    transform: scale(1.1);
+}
+
+.nav-btn:disabled {
+    background: #cbd5e0;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.slide-counter {
+    font-weight: 600;
+    color: #4a5568;
+    font-size: 16px;
+}
+
+/* Indicadores de slides */
+.slide-indicators {
+    position: fixed;
+    top: 50%;
+    right: 30px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 1000;
+}
+
+.indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.indicator.active {
+    background: #667eea;
+    transform: scale(1.3);
+}
+
+.indicator:hover {
+    background: rgba(255, 255, 255, 0.8);
+}
+
+/* Contenedor de slides */
+.slides-container {
+    display: flex;
+    width: 900vw;
+    height: 100vh;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.slide {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    position: relative;
+}
+
+.slide-content {
+    max-width: 1200px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Slide 1 - Título */
+.slide-1 {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.title-section {
+    margin-bottom: 60px;
+}
+
+.main-title {
+    font-size: 4.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(45deg, #fff, #f0f8ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.subtitle {
+    font-size: 2.2rem;
+    font-weight: 400;
+    margin-bottom: 30px;
+    opacity: 0.95;
+}
+
+.description {
+    font-size: 1.3rem;
+    max-width: 800px;
+    line-height: 1.6;
+    opacity: 0.9;
+}
+
+.hero-illustration {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.girl-coding {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    font-size: 4rem;
+    opacity: 0.8;
+}
+
+.girl-coding i {
+    animation: float 3s ease-in-out infinite;
+}
+
+.girl-coding i:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+.girl-coding i:nth-child(3) {
+    animation-delay: 1s;
+}
+
+.girl-coding i:nth-child(4) {
+    animation-delay: 1.5s;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+}
+
+/* Slides 2-9 - Contenido */
+.slide:not(.slide-1) {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    color: white;
+}
+
+.slide:nth-child(even):not(.slide-1) {
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+}
+
+.slide:nth-child(3n):not(.slide-1) {
+    background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+}
+
+.content-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+}
+
+.content-header h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.time-badge {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    backdrop-filter: blur(10px);
+}
+
+/* Slide 2 - Bienvenida */
+.content-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 60px;
+    align-items: center;
+    width: 100%;
+}
+
+.point {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    margin-bottom: 40px;
+    text-align: left;
+}
+
+.point i {
+    font-size: 2.5rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin-top: 5px;
+}
+
+.point h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.point p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    opacity: 0.9;
+}
+
+.illustration-box {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    text-align: center;
+}
+
+.illustration-box i {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    opacity: 0.8;
+}
+
+.illustration-box p {
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+/* Slide 3 - Bolt.IA */
+.demo-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    width: 100%;
+}
+
+.feature {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.feature i {
+    font-size: 2.5rem;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.feature h3 {
+    font-size: 1.6rem;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.feature p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+.browser-mockup {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+}
+
+.browser-header {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.browser-dots {
+    display: flex;
+    gap: 8px;
+}
+
+.browser-dots span {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.6);
+}
+
+.url-bar {
+    background: rgba(255, 255, 255, 0.3);
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.browser-content {
+    padding: 60px 40px;
+    text-align: center;
+}
+
+.browser-content i {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    opacity: 0.8;
+}
+
+.browser-content p {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+/* Slide 4 - Lluvia de ideas */
+.brainstorm-section h3 {
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+    font-weight: 600;
+}
+
+.ideas-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-bottom: 50px;
+    max-width: 800px;
+}
+
+.idea-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease;
+}
+
+.idea-card:hover {
+    transform: translateY(-5px);
+}
+
+.idea-card i {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    opacity: 0.9;
+}
+
+.idea-card h4 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.idea-card p {
+    font-size: 1rem;
+    opacity: 0.8;
+}
+
+.action-prompt {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 25px 40px;
+    border-radius: 50px;
+    backdrop-filter: blur(10px);
+}
+
+.action-prompt i {
+    font-size: 2rem;
+    color: #ffd700;
+}
+
+.action-prompt p {
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+/* Slide 5 - Buen prompt */
+.prompt-definition {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 50px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+}
+
+.prompt-definition i {
+    font-size: 3rem;
+    opacity: 0.9;
+}
+
+.prompt-definition h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.prompt-definition p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    max-width: 600px;
+}
+
+.comparison-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    max-width: 1000px;
+}
+
+.bad-example, .good-example {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+}
+
+.example-header {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-weight: 600;
+}
+
+.example-header.bad {
+    background: rgba(239, 68, 68, 0.3);
+}
+
+.example-header.good {
+    background: rgba(34, 197, 94, 0.3);
+}
+
+.example-header i {
+    font-size: 1.5rem;
+}
+
+.example-content {
+    padding: 25px;
+    text-align: left;
+}
+
+.example-content p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    font-style: italic;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.example-content ul {
+    list-style: none;
+}
+
+.example-content li {
+    padding: 5px 0;
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+.example-content li:before {
+    content: "• ";
+    color: rgba(255, 255, 255, 0.7);
+    margin-right: 8px;
+}
+
+/* Slide 6 - Prompt con IA */
+.prompt-formula h3 {
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+    font-weight: 600;
+}
+
+.formula-components {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+}
+
+.component {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    min-width: 150px;
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease;
+}
+
+.component:hover {
+    transform: translateY(-5px);
+}
+
+.component-icon {
+    margin-bottom: 15px;
+}
+
+.component-icon i {
+    font-size: 2.5rem;
+    opacity: 0.9;
+}
+
+.component h4 {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.component p {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.plus {
+    font-size: 2rem;
+    font-weight: bold;
+    opacity: 0.7;
+}
+
+.chatgpt-tip {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 25px 40px;
+    border-radius: 50px;
+    backdrop-filter: blur(10px);
+}
+
+.chatgpt-tip i {
+    font-size: 2.5rem;
+    color: #00d4aa;
+}
+
+.chatgpt-tip p {
+    font-size: 1.3rem;
+}
+
+/* Slide 7 - Construcción MVP */
+.construction-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-bottom: 50px;
+    max-width: 800px;
+}
+
+.step {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    text-align: left;
+}
+
+.step-number {
+    background: rgba(255, 255, 255, 0.2);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+.step-content {
+    flex: 1;
+}
+
+.step-content h4 {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.step-content p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+.step-content i {
+    font-size: 2rem;
+    float: right;
+    opacity: 0.7;
+    margin-top: -10px;
+}
+
+.hands-on {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+}
+
+.hands-on i {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    opacity: 0.9;
+}
+
+.hands-on h3 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.hands-on p {
+    font-size: 1.3rem;
+    opacity: 0.9;
+}
+
+/* Slide 8 - Presentaciones */
+.presentation-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    width: 100%;
+}
+
+.presentation-rules h3 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    font-weight: 600;
+    text-align: left;
+}
+
+.rule {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+.rule i {
+    font-size: 2rem;
+    opacity: 0.9;
+    width: 40px;
+}
+
+.rule p {
+    font-size: 1.3rem;
+}
+
+.presentation-visual {
+    text-align: center;
+}
+
+.stage {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    backdrop-filter: blur(10px);
+}
+
+.stage i {
+    font-size: 4rem;
+    margin-bottom: 15px;
+    opacity: 0.9;
+}
+
+.stage p {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.audience {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 25px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+}
+
+.audience i {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    opacity: 0.7;
+}
+
+.audience p {
+    font-size: 1.1rem;
+    opacity: 0.8;
+}
+
+/* Slide 9 - Cierre */
+.closing-section {
+    text-align: center;
+    max-width: 900px;
+}
+
+.closing-section h2 {
+    font-size: 3.5rem;
+    margin-bottom: 40px;
+    font-weight: 700;
+}
+
+.achievement {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 15px;
+    margin-bottom: 40px;
+    backdrop-filter: blur(10px);
+}
+
+.achievement i {
+    font-size: 4rem;
+    color: #ffd700;
+    margin-bottom: 15px;
+}
+
+.achievement h3 {
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.inspiration h3 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+.next-steps {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.step-item {
+    text-align: center;
+}
+
+.step-item i {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    opacity: 0.9;
+}
+
+.step-item p {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.resources {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    backdrop-filter: blur(10px);
+}
+
+.resources h4 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: opacity 0.3s ease;
+}
+
+.social-link:hover {
+    opacity: 0.8;
+}
+
+.social-link i {
+    font-size: 1.3rem;
+}
+
+.final-message {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 25px 40px;
+    border-radius: 50px;
+    backdrop-filter: blur(10px);
+}
+
+.final-message i {
+    font-size: 2rem;
+    color: #ffd700;
+}
+
+.final-message p {
+    font-size: 1.4rem;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .main-title {
+        font-size: 3.5rem;
+    }
+    
+    .subtitle {
+        font-size: 1.8rem;
+    }
+    
+    .content-header h2 {
+        font-size: 2.5rem;
+    }
+    
+    .content-grid,
+    .demo-section,
+    .presentation-info {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .ideas-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .formula-components {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .plus {
+        transform: rotate(90deg);
+    }
+    
+    .next-steps {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .social-links {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .slide {
+        padding: 20px;
+    }
+    
+    .main-title {
+        font-size: 2.8rem;
+    }
+    
+    .subtitle {
+        font-size: 1.5rem;
+    }
+    
+    .content-header h2 {
+        font-size: 2rem;
+    }
+    
+    .slide-nav {
+        bottom: 20px;
+        padding: 12px 20px;
+    }
+    
+    .nav-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 14px;
+    }
+    
+    .slide-indicators {
+        right: 15px;
+    }
+    
+    .logo-container {
+        top: 15px;
+        right: 15px;
+    }
+    
+    .comparison-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
