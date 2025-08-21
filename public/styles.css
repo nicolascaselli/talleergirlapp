@@ -144,60 +144,173 @@ body {
 
 /* Slide 1 - Título */
 .slide-1 {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+    position: relative;
+    overflow: hidden;
     color: white;
 }
 
+.slide-1::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.3) 0%, transparent 50%),
+        radial-gradient(circle at 40% 40%, rgba(120, 219, 255, 0.2) 0%, transparent 50%);
+    animation: backgroundPulse 8s ease-in-out infinite;
+}
+
+@keyframes backgroundPulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+}
+
+.slide-content {
+    position: relative;
+    z-index: 2;
+}
+
 .title-section {
-    margin-bottom: 60px;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.title-section::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(90deg, transparent, #ffd700, transparent);
+    border-radius: 2px;
+    animation: shimmer 2s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+    0%, 100% { opacity: 0.5; width: 100px; }
+    50% { opacity: 1; width: 200px; }
 }
 
 .main-title {
-    font-size: 4.5rem;
+    font-size: 5rem;
     font-weight: 700;
-    margin-bottom: 15px;
-    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
-    background: linear-gradient(45deg, #fff, #f0f8ff);
+    margin-bottom: 20px;
+    text-shadow: 
+        0 0 20px rgba(255, 215, 0, 0.5),
+        3px 3px 6px rgba(0, 0, 0, 0.5);
+    background: linear-gradient(45deg, #fff, #ffd700, #fff);
+    background-size: 200% 200%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     line-height: 1.1;
+    animation: titleGlow 3s ease-in-out infinite;
+    position: relative;
+}
+
+@keyframes titleGlow {
+    0%, 100% { 
+        background-position: 0% 50%;
+        text-shadow: 
+            0 0 20px rgba(255, 215, 0, 0.3),
+            3px 3px 6px rgba(0, 0, 0, 0.5);
+    }
+    50% { 
+        background-position: 100% 50%;
+        text-shadow: 
+            0 0 30px rgba(255, 215, 0, 0.8),
+            0 0 40px rgba(255, 215, 0, 0.4),
+            3px 3px 6px rgba(0, 0, 0, 0.5);
+    }
 }
 
 .subtitle {
-    font-size: 2rem;
+    font-size: 2.2rem;
     font-weight: 400;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     opacity: 0.95;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    text-shadow: 
+        0 0 15px rgba(255, 255, 255, 0.3),
+        2px 2px 4px rgba(0, 0, 0, 0.4);
     line-height: 1.2;
+    animation: subtitleFloat 4s ease-in-out infinite;
+}
+
+@keyframes subtitleFloat {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-5px); }
 }
 
 .description {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     max-width: 800px;
     line-height: 1.6;
-    opacity: 0.9;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+    opacity: 0.95;
+    text-shadow: 
+        0 0 10px rgba(255, 255, 255, 0.2),
+        1px 1px 3px rgba(0, 0, 0, 0.4);
+    animation: descriptionFade 5s ease-in-out infinite;
+}
+
+@keyframes descriptionFade {
+    0%, 100% { opacity: 0.95; }
+    50% { opacity: 1; }
 }
 
 .hero-illustration {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+}
+
+.hero-illustration::before {
+    content: '';
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(255, 215, 0, 0.1) 0%, transparent 70%);
+    border-radius: 50%;
+    animation: heroGlow 6s ease-in-out infinite;
+}
+
+@keyframes heroGlow {
+    0%, 100% { 
+        transform: scale(1);
+        opacity: 0.3;
+    }
+    50% { 
+        transform: scale(1.2);
+        opacity: 0.6;
+    }
 }
 
 .girl-coding {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-    font-size: 3rem;
-    opacity: 0.8;
+    gap: 40px;
+    font-size: 3.5rem;
+    opacity: 0.9;
     margin-top: 20px;
+    position: relative;
+    z-index: 2;
 }
 
 .girl-coding i {
     animation: float 3s ease-in-out infinite;
+    transition: all 0.3s ease;
+    filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.3));
+}
+
+.girl-coding i:hover {
+    transform: scale(1.2) translateY(-10px);
+    filter: drop-shadow(0 0 20px rgba(255, 215, 0, 0.6));
 }
 
 .girl-coding i:nth-child(2) {
@@ -213,8 +326,40 @@ body {
 }
 
 @keyframes float {
-    0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(-20px); }
+    0%, 100% { 
+        transform: translateY(0px) rotate(0deg);
+    }
+    25% { 
+        transform: translateY(-15px) rotate(2deg);
+    }
+    75% { 
+        transform: translateY(-25px) rotate(-2deg);
+    }
+}
+
+/* Partículas flotantes */
+.slide-1::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+        radial-gradient(2px 2px at 20px 30px, rgba(255, 255, 255, 0.3), transparent),
+        radial-gradient(2px 2px at 40px 70px, rgba(255, 215, 0, 0.4), transparent),
+        radial-gradient(1px 1px at 90px 40px, rgba(255, 255, 255, 0.3), transparent),
+        radial-gradient(1px 1px at 130px 80px, rgba(255, 215, 0, 0.4), transparent),
+        radial-gradient(2px 2px at 160px 30px, rgba(255, 255, 255, 0.3), transparent);
+    background-repeat: repeat;
+    background-size: 200px 100px;
+    animation: sparkle 20s linear infinite;
+    pointer-events: none;
+}
+
+@keyframes sparkle {
+    0% { transform: translateY(0px); }
+    100% { transform: translateY(-100px); }
 }
 
 /* Slides 2-9 - Contenido */
